@@ -31,12 +31,6 @@ Finally we arrived at Step-4 where we tell the webpack the entry point of the al
 
 karma-test-shim.js, is basically a root file which encompasses all the entry point of file that we tell the webpack to compile the files and if you find any files with .ts , Supply them to webpack.test.js
 
-var appContext = require.context('../src/app/', true, /\.ts/);
-appContext.keys().map(appContext);
-This is the important step and often the boiler plate karma-test-shim.js comes with below mentioned configuration which will only generate the code coverage for files which have corresponding spec.
-
-var appContext = require.context('../src', true, /\spec/\.ts/);
-appContext.keys().map(appContext);
 The above mentioned change is available on branch step-4
 
 you will be able to see unit test coverage generated for each file
